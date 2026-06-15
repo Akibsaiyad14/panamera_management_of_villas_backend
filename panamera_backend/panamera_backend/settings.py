@@ -41,7 +41,7 @@ if DEBUG:
     ALLOWED_HOSTS = ['*']
 else:
     # In production, be very specific about which hosts are allowed
-    ALLOWED_HOSTS = ['panameraliving.app', 'www.panameraliving.app']
+    ALLOWED_HOSTS = ['*','http://192.168.1.54:7000']
 
 
 # ALLOWED_HOSTS = ['*','http://192.168.1.54:7000']
