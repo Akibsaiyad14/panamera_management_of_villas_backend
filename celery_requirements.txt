@@ -1,0 +1,22 @@
+# Celery Dependencies - Add to requirment.txt
+
+# Celery - Distributed task queue
+celery==5.3.4
+
+# Redis - Message broker for Celery
+redis==5.0.1
+
+# Django Celery Beat - Database-backed periodic tasks
+django-celery-beat==2.5.0
+
+# Kombu - Messaging library (dependency of Celery)
+kombu==5.3.4
+
+# Vine - Promises/Futures library (dependency of Celery)
+vine==5.1.0
+
+# Optional: Flower - Web-based monitoring tool for Celery
+# flower==2.0.1
+
+# Optional: For Windows users (alternative to Redis)
+# Install Memurai instead: https://www.memurai.com/

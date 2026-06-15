@@ -1,0 +1,123 @@
+import logging
+from datetime import timedelta
+
+
+
+# Early Reason / Overtime Status constants
+STATUS_NA = 0
+STATUS_PENDING = 1
+STATUS_APPROVED = 2
+STATUS_REJECTED = 3
+STATUS_TL_APPROVED = 4  # Approved by Team Leader, awaiting Supervisor approval
+
+
+LAST_LOG_CLEANUP_TIME = None
+CLEANUP_INTERVAL = timedelta(hours=2)
+
+# DEBUG = True  # Set to False in production
+
+# For customer master
+
+STATUS_ACTIVE = 0
+STATUS_INACTIVE = 1
+STATUS_ON_HOLD = 2
+
+# For AMC Master
+AMC_STATUS_COMPLETED = 1
+AMC_STATUS_ACTIVE = 0
+AMC_STATUS_INACTIVE = 2
+
+#For AMC Jobs
+AMC_JOB_STATUS_NOT_STARTED = 0
+AMC_JOB_STATUS_IN_PROGRESS = 1
+AMC_JOB_STATUS_COMPLETED = 2
+
+# Approval Status For requests
+REQUEST_STATUS_PENDING = 0
+REQUEST_STATUS_APPROVED = 1
+REQUEST_STATUS_REJECTED = 2
+
+# Emergency Request Status (uses same as Task Status)
+# OPEN = 0, IN_PROGRESS = 3, CLOSED = 1
+
+# Task Type
+TASK = 0
+ISSUE = 1
+
+# Task Status
+OPEN = 0
+CLOSED = 1
+ON_HOLD = 2
+IN_PROGRESS = 3
+AWAITING_GATE_PASS = 4
+ALL_EXCEPT_CLOSED = 5
+QUOTATION_STAGE = 6
+JOB_APPROVED = 7
+CANCELLED = 8
+
+
+# Material Request Status
+MATERIAL_REQUEST_STATUS_PENDING = 0
+MATERIAL_REQUEST_STATUS_APPROVED = 1
+MATERIAL_REQUEST_STATUS_REJECTED = 2
+MATERIAL_REQUEST_STATUS_COMPLETED = 3
+
+# Material Request Priority
+MATERIAL_PRIORITY_LOW = 0
+MATERIAL_PRIORITY_NORMAL = 1
+MATERIAL_PRIORITY_URGENT = 2
+MATERIAL_PRIORITY_CRITICAL = 3
+
+
+# Leave Type
+LEAVE_TYPE_EMERGENCY = 0
+LEAVE_TYPE_ANNUAL = 1
+LEAVE_TYPE_SICK = 2
+
+# Leave Status (3-step approval: Team Leader → Supervisor → HR)
+LEAVE_STATUS_PENDING = 0  # Waiting for Team Leader approval
+LEAVE_STATUS_TL_APPROVED = 1  # Approved by Team Leader, waiting for Supervisor
+LEAVE_STATUS_SUPERVISOR_APPROVED = 2  # Approved by Supervisor, waiting for HR
+LEAVE_STATUS_HR_APPROVED = 3  # Approved by HR (Final approval)
+LEAVE_STATUS_REJECTED = 4  # Rejected at any stage
+
+# Leave Action Types (from frontend request)
+LEAVE_ACTION_APPROVE = 1
+LEAVE_ACTION_REJECT = 2
+
+# Leave certificate upload deadline (hours)
+LEAVE_CERTIFICATE_DEADLINE_HOURS = 12
+
+# Role Group Numbers
+ROLE_GROUP_SUPER_ADMIN = 1
+ROLE_GROUP_OFFICE_ADMIN = 2
+ROLE_GROUP_SUPERVISOR = 3
+ROLE_GROUP_TEAM_LEADER = 4
+ROLE_GROUP_HR = 6
+ROLE_GROUP_DESKTOP_USER = 8
+
+# Role Order IDs
+ROLE_ORDER_SUPER_ADMIN = 1
+ROLE_ORDER_OFFICE_ADMIN = 2
+ROLE_ORDER_SUPERVISOR = 3
+ROLE_ORDER_TEAM_LEADER = 4
+
+
+# Group Number to Role Name mapping
+GROUP_NUMBER_OFFICE_ADMIN = 2
+GROUP_NUMBER_SUPERVISOR = 3
+GROUP_NUMBER_TEAM_LEADER = 4
+GROUP_NUMBER_HR = 6
+ESTIMATOR_GROUP_NUMBER = 7
+
+
+# Activity Log Constants
+GARDEN_VISIT = "Garden"
+POOL_VISIT = "Pool"
+
+
+
+IMAGE_EXTENSIONS = ('.jpg', '.jpeg', '.png', '.gif', '.bmp', '.tiff')
+
+PAYMENT_SUCCESS = 0
+PAYMENT_FAILED = 1
